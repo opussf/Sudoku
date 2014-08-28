@@ -1,0 +1,6 @@
+Solving Sudoku
+
+Sudoku involves filling a 9x9 grid with numbers from 1-9 so that each Row, Column, and the 9 3x3 sub grids each contain only one of the range of numbers.
+
+How to solve it.
+
