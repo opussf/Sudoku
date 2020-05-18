@@ -13,4 +13,5 @@ suite.addTests( unittest.makeSuite( TestSudokuFiles ) )
 suite.addTests( unittest.makeSuite( TestMakeRandomSudoku ) )
 
 if __name__=="__main__":
-	xmlrunner.XMLTestRunner( verbose=True ).run( suite )
+	#xmlrunner.XMLTestRunner( verbose=True ).run( suite )
+	xmlrunner.XmlTestRunner().run( suite )

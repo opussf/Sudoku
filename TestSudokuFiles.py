@@ -68,34 +68,1091 @@ class TestSudokuFiles( unittest.TestCase ):
 			print "puzzle-117.txt fails:"
 			self.printOutput()
 			self.fail("puzzle-117.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_126_txt( self ):
-		self.solve.board.loadFromFile("puzzle-126.txt")
+	def test_puzzle_1266661680_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266661680.txt")
 		self.solve.solveBoard()
 		if not self.solve.board.isSolved():
-			print "puzzle-126.txt fails:"
+			print "puzzle-1266661680.txt fails:"
 			self.printOutput()
-			self.fail("puzzle-126.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_129_txt( self ):
-		self.solve.board.loadFromFile("puzzle-129.txt")
+			self.fail("puzzle-1266661680.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266661708_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266661708.txt")
 		self.solve.solveBoard()
 		if not self.solve.board.isSolved():
-			print "puzzle-129.txt fails:"
+			print "puzzle-1266661708.txt fails:"
 			self.printOutput()
-			self.fail("puzzle-129.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_130_txt( self ):
-		self.solve.board.loadFromFile("puzzle-130.txt")
+			self.fail("puzzle-1266661708.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266662607_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266662607.txt")
 		self.solve.solveBoard()
 		if not self.solve.board.isSolved():
-			print "puzzle-130.txt fails:"
+			print "puzzle-1266662607.txt fails:"
 			self.printOutput()
-			self.fail("puzzle-130.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_148_txt( self ):
-		self.solve.board.loadFromFile("puzzle-148.txt")
+			self.fail("puzzle-1266662607.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266662609_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266662609.txt")
 		self.solve.solveBoard()
 		if not self.solve.board.isSolved():
-			print "puzzle-148.txt fails:"
+			print "puzzle-1266662609.txt fails:"
 			self.printOutput()
-			self.fail("puzzle-148.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+			self.fail("puzzle-1266662609.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663754_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663754.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663754.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663754.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663756_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663756.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663756.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663756.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663758_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663758.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663758.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663758.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663769_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663769.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663769.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663769.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663773_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663773.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663773.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663773.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663776_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663776.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663776.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663776.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663886_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663886.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663886.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663886.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663911_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663911.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663911.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663911.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663914_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663914.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663914.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663914.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266663918_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266663918.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266663918.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266663918.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664640_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664640.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664640.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664640.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664673_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664673.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664673.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664673.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664677_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664677.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664677.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664677.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664679_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664679.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664679.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664679.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664689_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664689.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664689.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664689.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664817_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664817.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664817.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664817.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664821_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664821.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664821.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664821.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664824_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664824.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664824.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664824.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664830_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664830.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664830.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664830.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266664858_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266664858.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266664858.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266664858.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665100_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665100.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665100.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665100.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665130_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665130.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665130.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665130.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665157_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665157.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665157.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665157.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665398_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665398.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665398.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665398.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665400_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665400.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665400.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665400.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665402_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665402.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665402.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665402.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665407_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665407.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665407.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665407.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665412_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665412.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665412.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665412.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665485_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665485.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665485.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665485.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665487_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665487.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665487.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665487.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665491_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665491.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665491.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665491.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665500_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665500.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665500.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665500.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665516_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665516.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665516.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665516.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665644_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665644.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665644.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665644.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665696_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665696.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665696.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665696.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665699_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665699.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665699.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665699.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665701_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665701.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665701.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665701.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665890_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665890.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665890.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665890.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665895_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665895.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665895.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665895.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665899_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665899.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665899.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665899.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665902_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665902.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665902.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665902.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665903_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665903.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665903.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665903.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665975_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665975.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665975.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665975.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266665981_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266665981.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266665981.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266665981.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666007_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666007.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666007.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666007.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666011_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666011.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666011.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666011.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666014_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666014.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666014.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666014.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666052_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666052.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666052.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666052.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666062_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666062.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666062.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666062.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666066_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666066.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666066.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666066.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666068_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666068.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666068.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666068.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666072_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666072.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666072.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666072.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266666074_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266666074.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266666074.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266666074.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703100_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703100.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703100.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703100.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703101_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703101.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703101.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703101.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703102_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703102.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703102.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703102.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703103_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703103.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703103.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703103.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703104_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703104.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703104.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703104.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703105_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703105.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703105.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703105.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703138_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703138.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703138.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703138.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703139_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703139.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703139.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703139.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703141_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703141.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703141.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703141.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703142_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703142.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703142.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703142.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703144_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703144.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703144.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703144.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703145_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703145.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703145.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703145.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703398_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703398.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703398.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703398.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703399_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703399.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703399.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703399.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703401_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703401.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703401.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703401.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703402_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703402.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703402.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703402.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703403_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703403.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703403.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703403.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266703404_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266703404.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266703404.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266703404.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706457_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706457.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706457.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706457.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706458_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706458.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706458.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706458.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706459_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706459.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706459.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706459.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706460_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706460.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706460.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706460.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706461_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706461.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706461.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706461.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706469_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706469.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706469.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706469.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706471_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706471.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706471.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706471.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706472_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706472.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706472.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706472.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706473_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706473.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706473.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706473.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706474_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706474.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706474.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706474.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706504_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706504.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706504.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706504.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706506_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706506.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706506.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706506.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706507_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706507.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706507.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706507.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706508_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706508.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706508.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706508.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706509_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706509.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706509.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706509.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706510_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706510.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706510.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706510.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706544_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706544.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706544.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706544.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706546_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706546.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706546.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706546.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706547_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706547.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706547.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706547.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706548_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706548.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706548.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706548.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706549_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706549.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706549.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706549.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706583_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706583.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706583.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706583.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706584_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706584.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706584.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706584.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706585_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706585.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706585.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706585.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706586_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706586.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706586.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706586.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706587_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706587.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706587.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706587.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706612_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706612.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706612.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706612.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706613_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706613.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706613.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706613.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706614_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706614.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706614.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706614.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706615_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706615.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706615.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706615.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706616_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706616.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706616.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706616.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266706617_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266706617.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266706617.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266706617.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266707899_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266707899.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266707899.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266707899.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266707900_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266707900.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266707900.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266707900.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266707901_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266707901.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266707901.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266707901.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266707902_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266707902.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266707902.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266707902.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266707903_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266707903.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266707903.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266707903.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266707904_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266707904.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266707904.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266707904.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266715667_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266715667.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266715667.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266715667.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266715668_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266715668.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266715668.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266715668.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266715670_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266715670.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266715670.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266715670.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266715671_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266715671.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266715671.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266715671.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266715672_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266715672.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266715672.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266715672.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266715673_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266715673.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266715673.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266715673.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266819543_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266819543.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266819543.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266819543.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266819544_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266819544.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266819544.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266819544.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266819546_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266819546.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266819546.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266819546.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266819547_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266819547.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266819547.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266819547.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266819548_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266819548.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266819548.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266819548.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266819550_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266819550.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266819550.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266819550.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266825862_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266825862.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266825862.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266825862.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266825863_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266825863.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266825863.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266825863.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266825865_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266825865.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266825865.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266825865.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266825866_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266825866.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266825866.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266825866.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266825867_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266825867.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266825867.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266825867.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1266825869_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1266825869.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1266825869.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1266825869.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267145487_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267145487.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267145487.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267145487.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267145488_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267145488.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267145488.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267145488.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267145489_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267145489.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267145489.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267145489.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267145491_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267145491.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267145491.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267145491.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267145493_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267145493.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267145493.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267145493.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267145494_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267145494.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267145494.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267145494.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267147893_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267147893.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267147893.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267147893.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267147897_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267147897.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267147897.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267147897.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267147901_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267147901.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267147901.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267147901.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267147904_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267147904.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267147904.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267147904.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267147905_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267147905.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267147905.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267147905.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267147908_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267147908.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267147908.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267147908.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267148570_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267148570.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267148570.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267148570.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267148573_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267148573.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267148573.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267148573.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267148578_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267148578.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267148578.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267148578.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267148582_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267148582.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267148582.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267148582.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267148586_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267148586.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267148586.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267148586.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267148589_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267148589.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267148589.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267148589.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267153367_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267153367.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267153367.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267153367.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267153368_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267153368.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267153368.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267153368.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267153370_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267153370.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267153370.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267153370.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267153371_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267153371.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267153371.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267153371.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267153372_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267153372.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267153372.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267153372.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
+	def test_puzzle_1267153373_txt( self ):
+		self.solve.board.loadFromFile("puzzle-1267153373.txt")
+		self.solve.solveBoard()
+		if not self.solve.board.isSolved():
+			print "puzzle-1267153373.txt fails:"
+			self.printOutput()
+			self.fail("puzzle-1267153373.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
 	def test_puzzle_149_txt( self ):
 		self.solve.board.loadFromFile("puzzle-149.txt")
 		self.solve.solveBoard()
@@ -194,69 +1251,6 @@ class TestSudokuFiles( unittest.TestCase ):
 			print "puzzle-166.txt fails:"
 			self.printOutput()
 			self.fail("puzzle-166.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_167_txt( self ):
-		self.solve.board.loadFromFile("puzzle-167.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-167.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-167.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_168_txt( self ):
-		self.solve.board.loadFromFile("puzzle-168.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-168.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-168.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_169_txt( self ):
-		self.solve.board.loadFromFile("puzzle-169.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-169.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-169.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_170_txt( self ):
-		self.solve.board.loadFromFile("puzzle-170.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-170.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-170.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_171_txt( self ):
-		self.solve.board.loadFromFile("puzzle-171.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-171.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-171.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_172_txt( self ):
-		self.solve.board.loadFromFile("puzzle-172.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-172.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-172.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_173_txt( self ):
-		self.solve.board.loadFromFile("puzzle-173.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-173.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-173.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_174_txt( self ):
-		self.solve.board.loadFromFile("puzzle-174.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-174.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-174.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
-	def test_puzzle_175_txt( self ):
-		self.solve.board.loadFromFile("puzzle-175.txt")
-		self.solve.solveBoard()
-		if not self.solve.board.isSolved():
-			print "puzzle-175.txt fails:"
-			self.printOutput()
-			self.fail("puzzle-175.txt can only be solved to " + str(self.solve.board.solvedPerCent()) + "%")
 	def test_puzzle_176_txt( self ):
 		self.solve.board.loadFromFile("puzzle-176.txt")
 		self.solve.solveBoard()

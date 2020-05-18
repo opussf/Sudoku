@@ -11,20 +11,20 @@ class SolveSudoku( object ):
 	board = None
 	allMoves = None
 	solveTime = None
-
+	
 	def __init__( self, board = None ):
 		self.size = 9
 		self.squareSize = 3
 		#self.vals = [str(val) for val in range(1,self.size+1)]
 		self.setBoard( board )
-
+		
 	def setBoard( self, board ):
 		self.board = board
 		self.lpCount = 0
-
+		
 	def getAllMoves( self ):
 		return self.allMoves
-
+		
 	def getSolveTime( self ):
 		return self.solveTime
 
@@ -43,10 +43,10 @@ class SolveSudoku( object ):
 
 	def solveSquare( self, square ):
 		""" Square is a list of lists that represent a square
-		returns the modified square and a tuple: ( (x,y), value)
+		returns the modified square and a tuple: ( (x,y), value) 
 		Note really needed?
 		"""
-
+		
 		# Convert to a line, and try solveLine first
 		line = []
 		for r in square:
@@ -54,7 +54,7 @@ class SolveSudoku( object ):
 		#print self.solveLine( line )
 
 		return None
-
+		
 	def buildUsed( self, x, y ):
 		""" Builds a used set for a square.  Used set is values that the square cannot be,
 		and can be recorded into the notes part of the board.
@@ -67,12 +67,12 @@ class SolveSudoku( object ):
 		# find the upper left of the square for this point
 		squareX = (x / self.squareSize) * self.squareSize
 		squareY = (y / self.squareSize) * self.squareSize
-
+		
 		# search column for values and set in the Notes
 		for val in self.board.getCol( x ):
 			if val:
 				self.board.setNoteValue( x, y, val )
-
+		
 		# search row for values and set in the Notes
 		for val in self.board.getRow( y ):
 			if val:
@@ -83,7 +83,7 @@ class SolveSudoku( object ):
 			if val:
 				self.board.setNoteValue( x, y, val )
 		return self.board.getNotes( x, y )
-
+				
 	def buildUsedAll( self ):
 #		print "buildUsedAll()"
 		for y in range(self.size):
@@ -112,10 +112,10 @@ class SolveSudoku( object ):
 						#print x,y, singleMissing[1][1], "SingleValue"
 						#print self.board
 						repeat = True
-			if repeat:
+			if repeat: 
 				loopCount += 1
 		return moves
-
+	
 	def solveForSingleMissing( self ):
 		""" This finds any box in the square where it can only have 1 value.
 		This is where a cross test finds a single box in a square can have a value.
@@ -133,7 +133,7 @@ class SolveSudoku( object ):
 				for sX in squareVals:
 					#print "\tSquare starting at:",sX, sY
 					lists = []
-					# loop through the boxes in the square.
+					# loop through the boxes in the square.  
 					for y in range(sY, sY+3):
 						for x in range(sX, sX+3):
 							self.buildUsed( x, y )
@@ -142,7 +142,7 @@ class SolveSudoku( object ):
 							cannotBeList = filter( lambda x: x, cannotBeList)
 							if len(cannotBeList):
 								lists.append([x,y,cannotBeList])
-
+						
 					missing = {}
 					for v in self.board.vals:
 						cols, rows = {}, {}
@@ -168,7 +168,7 @@ class SolveSudoku( object ):
 							for x in range(self.size):
 								if x not in cols.keys():
 									self.board.setNoteValue( x, y, v )
-
+						
 						if notFoundCount == 1:
 							#print v, "was not found only once"
 							#print v, "should go at", missing[v]
@@ -176,14 +176,14 @@ class SolveSudoku( object ):
 							moves.append( ( x, y, v, "sm" ) )
 							self.board.setValue( x, y, v )
 							repeat = True
-			if repeat:
+			if repeat: 
 				loopCount += 1
 				#print "Loop"
 		return moves
-
+		
 	def solveForHiddenSingle( self ):
 		""" http://angusj.com/sudoku/hints.php
-		find a hidden single - a value that can only be in one location in a set
+		find a hidden single - a value that can only be in one location in a set 
 		search the notes (possible values) for a single box with a unique possible value
 		"""
 		for x in range( self.board.size ):
@@ -193,7 +193,7 @@ class SolveSudoku( object ):
 				#print x, y, possibleVals, self.board.getValue( x, y )
 				if possibleVals:    # if not None
 					for possVal in possibleVals:
-						if possVal in missingValsPos.keys():    # assign
+						if possVal in missingValsPos.keys():    # assign 
 							missingValsPos[possVal].append(y)
 						else:
 							missingValsPos[possVal] = [y]
@@ -222,7 +222,7 @@ class SolveSudoku( object ):
 					return [(xVals[0], y, val, "hs")]
 			#print "="*42
 		return []
-
+		
 #	def solveForDoubleMissingValues( self ):
 #		""" Find places where a box has to be a value because of double elimination.
 #		find any row or column with only 2 values missing.
@@ -236,7 +236,7 @@ class SolveSudoku( object ):
 #				print missingCount, "col:",x, col
 #				for y in range(self.size):
 #					if not col[y]:
-#						print x,y, self.board.getNotes(x,y)
+#						print x,y, self.board.getNotes(x,y) 
 #		for y in range(self.size):
 #			row = self.board.getRow( y )
 #			missingCount = len( filter( lambda x: not x, row ) )
@@ -246,9 +246,9 @@ class SolveSudoku( object ):
 #					if not row[x]:
 #						print x,y, self.board.getNotes(x,y)
 #		return []
-
+		
 	def eliminateLockedPairValues( self, ver ):
-		""" Eliminate Locked Pair Values from Notes
+		""" Eliminate Locked Pair Values from Notes 
 		ver should be in [1,2,3] 1 for column testing, 2 for row testing, 3 for square"""
 		self.buildUsedAll()
 		valOut = []
@@ -313,7 +313,7 @@ class SolveSudoku( object ):
 			self.board.setNoteValue( x, y, v )
 			#print x,y,v, self.board.getNotes( x, y )
 		return valOut
-
+		
 	def solveSingle5050( self ):
 		""" Solve a 50/50 split """
 		# has 5050 been called before?
@@ -331,14 +331,14 @@ class SolveSudoku( object ):
 					if revertVal[3] == 'ff':
 						revert = False
 						self.allMoves.append(revertVal)
-
+					
 			self.buildUsedAll()
 			val = list( set(self.board.getPossible( *revertVal[:2] )) - set(revertVal[2]) )[0]
 			self.board.setValue( revertVal[0], revertVal[1],  val )
 			self.buildUsedAll()
 			return [ (revertVal[0], revertVal[1], val, "ff") ]
-
-
+			
+			
 		#print "5050", calledTimes, skipCount, reverse, self.allMoves
 		# find a box with 2 possible values
 		for y in range( self.board.size ):
@@ -350,7 +350,7 @@ class SolveSudoku( object ):
 					self.buildUsedAll()
 					return [ (x, y, val, "ff") ]
 		return []
-
+		
 	def solveBoard( self ):
 		""" loop through the calls """
 		#print self.board
@@ -369,12 +369,12 @@ class SolveSudoku( object ):
 			if len(moves) > 0: repeat,lpUsed = True,3
 			self.allMoves.extend(moves)
 			loopMoves += len(moves)
-
+			
 			moves = self.solveForSingleMissing()
 			if len(moves) > 0: repeat,lpUsed = True,3
 			self.allMoves.extend(moves)
 			loopMoves += len(moves)
-
+			
 			"""
 			if (loopMoves == 0):
 				print "0 moves.  Solved:", self.board.isSolved(), self.board.solvedPerCent()
@@ -387,22 +387,21 @@ class SolveSudoku( object ):
 				self.allMoves.extend(moves)
 				loopMoves += len(moves)
 				if len(moves) > 0: repeat = True
-
+				
 			if (loopMoves == 0) and (not self.board.isSolved()) and (lpToDo):
 				#print "Trying Locked Pair elimination"
 				moves = self.eliminateLockedPairValues(lpToDo)
 				#if repeat: print "Locked Pair elimination found"
 				self.allMoves.extend(moves)
-				if lpToDo:
+				if lpToDo: 
 					repeat = True
 				lpToDo -= 1
-			'''
+			
 			if (loopMoves == 0) and (not self.board.isSolved()):
 				moves = self.solveSingle5050()
 				self.allMoves.extend(moves)
 				if len(moves) > 0: repeat = True
-			'''
-
+			
 			#moves = self.solveForDoubleMissingValues()
 			#if len(moves) > 0: repeat = True
 			#self.allMoves.extend(moves)
