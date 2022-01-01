@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module MakeRandomSudoku</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>MakeRandomSudoku</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/opus/Dev/Sudoku/MakeRandomSudoku.py">/Users/opus/Dev/Sudoku/MakeRandomSudoku.py</a></font></td></tr></table>
+    <p><tt>$Id$</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="random.html">random</a><br>
+</td><td width="25%" valign=top><a href="solveSudoku.html">solveSudoku</a><br>
+<a href="sudokuboard.html">sudokuboard</a><br>
+</td><td width="25%" valign=top><a href="time.html">time</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="solveSudoku.html#SolveSudoku">solveSudoku.SolveSudoku</a>(<a href="__builtin__.html#object">__builtin__.object</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="MakeRandomSudoku.html#MakeRandomSudoku">MakeRandomSudoku</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="MakeRandomSudoku">class <strong>MakeRandomSudoku</strong></a>(<a href="solveSudoku.html#SolveSudoku">solveSudoku.SolveSudoku</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Generate&nbsp;a&nbsp;random&nbsp;Sudoku&nbsp;board.<br>
+Method:&nbsp;&nbsp;Use&nbsp;the&nbsp;possible&nbsp;set&nbsp;returned&nbsp;for&nbsp;any&nbsp;one&nbsp;box,&nbsp;randomly&nbsp;choose,&nbsp;move&nbsp;on.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="MakeRandomSudoku.html#MakeRandomSudoku">MakeRandomSudoku</a></dd>
+<dd><a href="solveSudoku.html#SolveSudoku">solveSudoku.SolveSudoku</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="MakeRandomSudoku-__init__"><strong>__init__</strong></a>(self, board)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-clearRow"><strong>clearRow</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-generate"><strong>generate</strong></a>(self)</dt><dd><tt>returns&nbsp;the&nbsp;board,&nbsp;and&nbsp;the&nbsp;filename</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-generatePDF"><strong>generatePDF</strong></a>(self, fname<font color="#909090">=None</font>)</dt><dd><tt>Generate&nbsp;a&nbsp;PDF&nbsp;of&nbsp;a&nbsp;puzzle&nbsp;in&nbsp;a&nbsp;file.<br>
+Writes&nbsp;the&nbsp;pdf&nbsp;and&nbsp;returns&nbsp;the&nbsp;fileName</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-getPuzzleList"><strong>getPuzzleList</strong></a>(self)</dt><dd><tt>returns&nbsp;a&nbsp;list&nbsp;that&nbsp;defines&nbsp;a&nbsp;puzzle.&nbsp;&nbsp;Can&nbsp;be&nbsp;used&nbsp;to&nbsp;write&nbsp;out&nbsp;to&nbsp;the&nbsp;file.<br>
+Filters&nbsp;None&nbsp;to&nbsp;''</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-makeRandomRow"><strong>makeRandomRow</strong></a>(self, y)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-pokeHoles"><strong>pokeHoles</strong></a>(self)</dt><dd><tt>This&nbsp;randomly&nbsp;removes&nbsp;values&nbsp;from&nbsp;the&nbsp;board</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-saveBoard"><strong>saveBoard</strong></a>(self, puzzleList<font color="#909090">=None</font>)</dt></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>fName</strong> = None</dl>
+
+<hr>
+Methods inherited from <a href="solveSudoku.html#SolveSudoku">solveSudoku.SolveSudoku</a>:<br>
+<dl><dt><a name="MakeRandomSudoku-buildUsed"><strong>buildUsed</strong></a>(self, x, y)</dt><dd><tt>Builds&nbsp;a&nbsp;used&nbsp;set&nbsp;for&nbsp;a&nbsp;square.&nbsp;&nbsp;Used&nbsp;set&nbsp;is&nbsp;values&nbsp;that&nbsp;the&nbsp;square&nbsp;cannot&nbsp;be,<br>
+and&nbsp;can&nbsp;be&nbsp;recorded&nbsp;into&nbsp;the&nbsp;notes&nbsp;part&nbsp;of&nbsp;the&nbsp;board.<br>
+Pulls&nbsp;values&nbsp;from&nbsp;the&nbsp;square,&nbsp;column&nbsp;and&nbsp;row&nbsp;for&nbsp;that&nbsp;square.<br>
+returns&nbsp;none&nbsp;if&nbsp;already&nbsp;set</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-buildUsedAll"><strong>buildUsedAll</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-eliminateLockedPairValues"><strong>eliminateLockedPairValues</strong></a>(self, ver)</dt><dd><tt>Eliminate&nbsp;Locked&nbsp;Pair&nbsp;Values&nbsp;from&nbsp;Notes&nbsp;<br>
+ver&nbsp;should&nbsp;be&nbsp;in&nbsp;[1,2,3]&nbsp;1&nbsp;for&nbsp;column&nbsp;testing,&nbsp;2&nbsp;for&nbsp;row&nbsp;testing,&nbsp;3&nbsp;for&nbsp;square</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-getAllMoves"><strong>getAllMoves</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-getSolveTime"><strong>getSolveTime</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-setBoard"><strong>setBoard</strong></a>(self, board)</dt></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveBoard"><strong>solveBoard</strong></a>(self)</dt><dd><tt>loop&nbsp;through&nbsp;the&nbsp;calls</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveForHiddenSingle"><strong>solveForHiddenSingle</strong></a>(self)</dt><dd><tt><a href="http://angusj.com/sudoku/hints.php">http://angusj.com/sudoku/hints.php</a><br>
+find&nbsp;a&nbsp;hidden&nbsp;single&nbsp;-&nbsp;a&nbsp;value&nbsp;that&nbsp;can&nbsp;only&nbsp;be&nbsp;in&nbsp;one&nbsp;location&nbsp;in&nbsp;a&nbsp;set&nbsp;<br>
+search&nbsp;the&nbsp;notes&nbsp;(possible&nbsp;values)&nbsp;for&nbsp;a&nbsp;single&nbsp;box&nbsp;with&nbsp;a&nbsp;unique&nbsp;possible&nbsp;value</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveForSingleMissing"><strong>solveForSingleMissing</strong></a>(self)</dt><dd><tt>This&nbsp;finds&nbsp;any&nbsp;box&nbsp;in&nbsp;the&nbsp;square&nbsp;where&nbsp;it&nbsp;can&nbsp;only&nbsp;have&nbsp;1&nbsp;value.<br>
+This&nbsp;is&nbsp;where&nbsp;a&nbsp;cross&nbsp;test&nbsp;finds&nbsp;a&nbsp;single&nbsp;box&nbsp;in&nbsp;a&nbsp;square&nbsp;can&nbsp;have&nbsp;a&nbsp;value.<br>
+Also&nbsp;finds&nbsp;rows&nbsp;or&nbsp;columns&nbsp;in&nbsp;a&nbsp;square&nbsp;that&nbsp;can&nbsp;only&nbsp;have&nbsp;a&nbsp;value,&nbsp;and&nbsp;marks&nbsp;the&nbsp;rest&nbsp;of&nbsp;the&nbsp;row&nbsp;or&nbsp;column&nbsp;as&nbsp;such<br>
+(bottom&nbsp;left)</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveForSingleValues"><strong>solveForSingleValues</strong></a>(self)</dt><dd><tt>This&nbsp;finds&nbsp;any&nbsp;box&nbsp;that&nbsp;has&nbsp;a&nbsp;single&nbsp;value&nbsp;available&nbsp;to&nbsp;it,&nbsp;and&nbsp;assigns&nbsp;that&nbsp;value.<br>
+Loop&nbsp;until&nbsp;no&nbsp;more&nbsp;single&nbsp;values&nbsp;are&nbsp;found<br>
+This&nbsp;solves&nbsp;any&nbsp;line,&nbsp;row,&nbsp;or&nbsp;even&nbsp;square<br>
+returns&nbsp;a&nbsp;list&nbsp;of&nbsp;'moves',&nbsp;(x,&nbsp;y,&nbsp;value)<br>
+(Bottom&nbsp;right)</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveLine"><strong>solveLine</strong></a>(self, line)</dt><dd><tt>Solve&nbsp;a&nbsp;single&nbsp;line.&nbsp;&nbsp;This&nbsp;can&nbsp;be&nbsp;a&nbsp;column,&nbsp;or&nbsp;row,&nbsp;but&nbsp;must&nbsp;be&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;puzzle<br>
+Mostly&nbsp;will&nbsp;just&nbsp;find&nbsp;singles&nbsp;that&nbsp;are&nbsp;missing&nbsp;as&nbsp;there&nbsp;is&nbsp;no&nbsp;other&nbsp;data&nbsp;available&nbsp;to&nbsp;it<br>
+returns&nbsp;the&nbsp;modified&nbsp;line,&nbsp;and&nbsp;a&nbsp;tuple&nbsp;of&nbsp;(pos,&nbsp;value)</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveSingle5050"><strong>solveSingle5050</strong></a>(self)</dt><dd><tt>Solve&nbsp;a&nbsp;50/50&nbsp;split</tt></dd></dl>
+
+<dl><dt><a name="MakeRandomSudoku-solveSquare"><strong>solveSquare</strong></a>(self, square)</dt><dd><tt>Square&nbsp;is&nbsp;a&nbsp;list&nbsp;of&nbsp;lists&nbsp;that&nbsp;represent&nbsp;a&nbsp;square<br>
+returns&nbsp;the&nbsp;modified&nbsp;square&nbsp;and&nbsp;a&nbsp;tuple:&nbsp;(&nbsp;(x,y),&nbsp;value)&nbsp;<br>
+Note&nbsp;really&nbsp;needed?</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="solveSudoku.html#SolveSudoku">solveSudoku.SolveSudoku</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="solveSudoku.html#SolveSudoku">solveSudoku.SolveSudoku</a>:<br>
+<dl><dt><strong>allMoves</strong> = None</dl>
+
+<dl><dt><strong>board</strong> = None</dl>
+
+<dl><dt><strong>solveTime</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>cm</strong> = 28.346456692913385<br>
+<strong>inch</strong> = 72.0<br>
+<strong>letter</strong> = (612.0, 792.0)<br>
+<strong>mm</strong> = 2.834645669291339<br>
+<strong>pica</strong> = 12.0</td></tr></table>
+</body></html>
