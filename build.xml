@@ -122,6 +122,7 @@
 				<include name="*"/>
 			</fileset>
 		</copy>
+		<chmod file="${working.dir}/SudokuTXT.py" perm="ugo+x"/>
 		<zip 	destfile="${target.dir}/${project.zip}"
 				basedir="${working.dir}"
 				includes="${ant.project.name}/**,d../docs/**"/>
@@ -152,6 +153,10 @@
 				<include name="*.log"/>
 			</fileset>
 		</move>
+		<delete>
+			<fileset dir="${working.dir}" includes="*.txt"/>
+			<fileset dir="${working.dir}" includes="*.pdf"/>
+		</delete>
 		<fail message="The tests failed. Please see the output for details.">
 			<condition>
 				<not>

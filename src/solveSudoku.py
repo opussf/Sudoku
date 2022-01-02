@@ -90,7 +90,7 @@ class SolveSudoku( object ):
 			for x in range(self.size):
 				self.buildUsed( x, y )
 
-	def solveForSingleValues( self ):
+	def solveForSingleValues( self ):   # sv
 		""" This finds any box that has a single value available to it, and assigns that value.
 		Loop until no more single values are found
 		This solves any line, row, or even square
@@ -116,7 +116,7 @@ class SolveSudoku( object ):
 				loopCount += 1
 		return moves
 	
-	def solveForSingleMissing( self ):
+	def solveForSingleMissing( self ):  # sm
 		""" This finds any box in the square where it can only have 1 value.
 		This is where a cross test finds a single box in a square can have a value.
 		Also finds rows or columns in a square that can only have a value, and marks the rest of the row or column as such
@@ -181,7 +181,7 @@ class SolveSudoku( object ):
 				#print "Loop"
 		return moves
 		
-	def solveForHiddenSingle( self ):
+	def solveForHiddenSingle( self ):   # hs
 		""" http://angusj.com/sudoku/hints.php
 		find a hidden single - a value that can only be in one location in a set 
 		search the notes (possible values) for a single box with a unique possible value

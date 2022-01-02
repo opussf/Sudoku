@@ -16,25 +16,25 @@ def enterData():
 	done = False
 	offset = 0
 	while not done:
-		c = raw_input(">").lower()
+		c = raw_input("%s>" % offset).lower()
 		if not len(c):
 			print ">%s<" % ("".join(puzzle),)
 			#print "Enter something idiot"
 			#continue
-		elif c[0] == "d":
+		elif c[0] == "d":  # delete
 			puzzle[offset-1]=''
 			offset -= 1
 			pStr = ",".join(puzzle)
 			board.initBoard(pStr)
-		elif c[0] == "c":
+		elif c[0] == "c":  # clear
 			offset = 0
 			puzzle=['']*81
 			pStr = ",".join(puzzle)
 			board.initBoard(pStr)
-		elif c[0] == "s":
+		elif c[0] == "s":  # save
 			fname = getFilename()
 			saveData( fname )
-		elif c[0] == "l":
+		elif c[0] == "l":  # load
 			fname = getFilename()
 			loadData( fname )
 			#solveBoard.setBoard(board)
