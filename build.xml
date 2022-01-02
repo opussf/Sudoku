@@ -1,42 +1,159 @@
-<project name="sudoku" default="build">
+<project name="Sudoku" default="package">
 
-	<target name="clean">
-		<delete dir="docs"/>
-		<delete dir="testResults"/>
+	<tstamp/>
+	<property file="build.properties"/>
+	<property environment="env"/>
+	<property name="env.BUILD_NUMBER" value=""/>
+	<property name="build.number" value=""/>
+	<!--  Pull git repo info -->
+	<!-- Get the first commit -->
+	<exec executable="git" dir="." outputproperty="git.first" failifexecutionfails="false" errorproperty="">
+		<arg line="rev-list --abbrev-commit --max-parents=0 HEAD" />
+	</exec>
+	<!-- Get the last tag reachable from this branch -->
+	<exec executable="git" dir="." outputproperty="git.tag.tmp" failifexecutionfails="false" errorproperty="">
+		<arg line="describe --tags --abbrev=0" />
+	</exec>
+	<condition property="git.tag" value="${git.tag.tmp}" else="${git.first}">
+		<length string="${git.tag.tmp}" trim="true" when="greater" length="0"/>
+	</condition>
+	<!-- Get a 'revision' based on last tag, commit count, commitsha, and branch name -->
+	<exec executable="git" dir="." outputproperty="git.revision" failifexecutionfails="false" errorproperty="">
+		<arg line="describe --tags --always HEAD" />
+	</exec>
+	<condition property="repository.version" value="${git.revision}" else="unknown">
+		<and>
+			<isset property="git.revision"/>
+			<length string="${git.revision}" trim="yes" length="0" when="greater"/>
+		</and>
+	</condition>
+	<!-- find gitbranch -->
+	<!-- find gitbranch -->
+	<exec executable="git" dir="." outputproperty="git.branch.tmp" failifexecutionfails="false" errorproperty="">
+		<arg line="rev-parse --abbrev-ref HEAD"/>
+	</exec>
+	<!-- replace '/' in branch name with '_' -->
+	<loadresource property="git.branch">
+		<propertyresource name="git.branch.tmp"/>
+		<filterchain>
+			<tokenfilter>
+				<replacestring from="/" to="_"/>
+			</tokenfilter>
+		</filterchain>
+	</loadresource>
+	<!-- assign the git.branch to the branch property -->
+	<condition property="branch" value="-${git.branch}" else="">
+		<and>
+			<isset property="git.branch"/>
+			<not>
+				<or>
+					<equals arg1="${git.branch}" arg2="master"/>
+					<equals arg1="${git.branch}" arg2="HEAD"/>
+				</or>
+			</not>
+		</and>
+	</condition>
+
+	<property name="version.number" value="${repository.version}${branch}${build.number}"/>
+	<echo>Building: ${version.number}</echo>
+	<!-- end git repo info -->
+
+	<property name="project.zip" value="${ant.project.name}_${version.number}.zip"/>
+	<property name="test.dir" location="test"/>
+
+	<property name="target.dir" location="target"/>
+	<property name="working.dir" location="${target.dir}/working"/>
+	<property name="report.dir" location="${target.dir}/reports"/>
+
+	<patternset id="packageFiles">
+		<include name="src/*.py"/>
+		<include name="README.md"/>
+		<include name="${working.dir}/*.txt"/>
+	</patternset>
+
+	<!--  -->
+
+	<target name="clean" description="Cleans old builds">
+		<delete dir="${target.dir}" verbose="true"/>
 	</target>
 
-	<target name="init">
-		<mkdir dir="docs"/>
-		<mkdir dir="testResults"/>
-	</target>
-
-	<target name="test" depends="init">
-		<exec executable="python">
-			<arg value="MakeTestSudokuFiles.py"/>
+	<target name="changelog" description="Creates a changelog">
+		<mkdir dir="${working.dir}"/>
+		<echo file="${working.dir}/changelog.txt">Changes since ${git.tag}..${line.separator}${line.separator}</echo>
+		<exec executable="git" dir=".">
+			<arg line="log --graph --pretty=format:'%h %ci - %d %s &lt;%an&gt;' ${git.tag}.."/>
+			<redirector append="true" output="${working.dir}/changelog.txt"/>
 		</exec>
-		<exec executable="python">
-			<arg value="TestSuite.py"/>
-		</exec>
-		<move todir="testResults">
-			<fileset dir=".">
-				<include name="TEST*.xml"/>
-			</fileset>
-		</move>
 	</target>
-	
-	<target name="doc" depends="init">
-		<exec executable="pydoc">
+
+	<target name="doc" description="create docs">
+		<delete dir="${target.dir}/docs" verbose="false"/>
+		<exec executable="pydoc" dir="src">
 			<arg value="-w"/>
 			<arg value="./"/>
 		</exec>
-		<move todir="docs">
-			<fileset dir=".">
+		<move todir="${target.dir}/docs">
+			<fileset dir="./src/">
 				<include name="*.html"/>
 			</fileset>
 		</move>
+		<delete>
+			<fileset dir="src">
+				<include name="**/*.pyc"/>
+			</fileset>
+		</delete>
 	</target>
 
-	<target name="build" depends="test,doc">
+	<target name="package" depends="changelog, test, doc" description="Create a deploy package">
+		<property name="package.dir" location="${working.dir}/${ant.project.name}"/>
+		<delete dir="${package.dir}" verbose="false"/>
+		<copy	todir="${package.dir}" filtering="true" flatten="true">
+			<fileset dir=".">
+				<patternset refid="packageFiles"/>
+			</fileset>
+		</copy>
+		<copy   todir="${package.dir}/docs" filtering="false">
+			<fileset dir="${target.dir}/docs">
+				<include name="*"/>
+			</fileset>
+		</copy>
+		<zip 	destfile="${target.dir}/${project.zip}"
+				basedir="${working.dir}"
+				includes="${ant.project.name}/**,d../docs/**"/>
+		<checksum file="${target.dir}/${project.zip}"
+				  property="zip.md5" />
+		<echo file="${target.dir}/${project.zip}.md5">${zip.md5} ${project.zip}${line.separator}</echo>
+	</target>
+
+	<target name="test" description="run unit tests">
+		<delete dir="${report.dir}"/>
+		<copy   todir="${working.dir}" filtering="true">
+			<fileset dir="src">
+				<include name="*.py"/>
+			</fileset>
+			<fileset dir="${test.dir}">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="puzzles">
+				<include name="*"/>
+			</fileset>
+		</copy>
+		<exec executable="python" dir="${working.dir}" resultproperty="testResult">
+			<arg value="TestSuite.py"/>
+		</exec>
+		<move todir="${report.dir}">
+			<fileset dir="${working.dir}">
+				<include name="TEST*.xml"/>
+				<include name="*.log"/>
+			</fileset>
+		</move>
+		<fail message="The tests failed. Please see the output for details.">
+			<condition>
+				<not>
+					<equals arg1="${testResult}" arg2="0"/>
+				</not>
+			</condition>
+		</fail>
 	</target>
 
 </project>
