@@ -97,6 +97,11 @@
 				<include name="*.html"/>
 			</fileset>
 		</move>
+		<copy todir="docs">
+			<fileset dir="${target.dir}/docs">
+				<include name="*.html"/>
+			</fileset>
+		</copy>
 		<delete>
 			<fileset dir="src">
 				<include name="**/*.pyc"/>
