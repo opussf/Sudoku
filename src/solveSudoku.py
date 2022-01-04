@@ -223,6 +223,59 @@ class SolveSudoku( object ):
 			#print "="*42
 		return []
 		
+	def solveForDirectInteraction( self ):  # di
+		""" direct interaction
+		This is where a value is only possible in a single row or column in a square.
+		That condition removes that value from all other locations in that row or column
+		"""
+		moves = []
+		squares = range( 0, self.size, self.squareSize )
+		# loop through the squares
+		for sY in squares:
+			for sX in squares:
+				#print "\tSquare starting at:",sX, sY
+				squareValues = self.board.getSquare( sX, sY, self.squareSize )
+				# find missing values
+				missingIn = {} # v = [[columns], [rows]]
+				for v in self.board.vals:
+					if v not in squareValues[1]:
+						for y in range( sY, sY+self.squareSize ):
+							for x in range( sX, sX+self.squareSize ):
+								possibleAt = self.board.getPossible( x, y )
+								if possibleAt and v in possibleAt:
+									if v in missingIn.keys():
+										missingIn[v][0].append(x)
+										missingIn[v][1].append(y)
+									else:
+										missingIn[v] = [[x],[y]]
+									#print("%s: %s" % (v,missingIn[v]))
+					print( missingIn.keys() )
+					if v in missingIn.keys():
+						missingIn[v][0] = list(set(missingIn[v][0]))
+						missingIn[v][1] = list(set(missingIn[v][1]))
+						print( v, missingIn[v] )
+
+						if len(missingIn[v][0]) == 1:
+							singleColumn = missingIn[v][0][0]
+							print( "%s can only be in column %s in Square (%s,%s)." % (v, singleColumn, sX, sY ) )
+							#print("%s can only be in column %s" % (v,singleColumn) )
+							#print( list(set(range(self.size)) - set(range( sY, sY+self.squareSize))))
+							for y in list(set(range(self.size)) - set(range( sY, sY+self.squareSize))):
+								if self.board.clearNoteValue( singleColumn, y, v ):
+									moves.append([singleColumn, y, v, "di"])
+
+						elif len(missingIn[v][1]) == 1:
+							singleRow = missingIn[v][1][0]
+							print("%s can only be in row %s" % (v,singleRow))
+							for x in list(set(range(self.size)) - set(range( sX, sX+self.squareSize))):
+								if self.board.clearNoteValue( x, singleRow, v ):
+									moves.append([x, singleRow, v, "di"])
+
+
+
+		return moves
+
+
 #	def solveForDoubleMissingValues( self ):
 #		""" Find places where a box has to be a value because of double elimination.
 #		find any row or column with only 2 values missing.
@@ -374,6 +427,12 @@ class SolveSudoku( object ):
 			if len(moves) > 0: repeat,lpUsed = True,3
 			self.allMoves.extend(moves)
 			loopMoves += len(moves)
+
+			if (loopMoves == 0) and not self.board.isSolved():
+				moves = self.solveForDirectInteraction()
+				if len(moves) > 0: repeat,lpUsed = True,3
+				self.allMoves.extend(moves)
+				loopMoves += len(moves)
 			
 			"""
 			if (loopMoves == 0):
@@ -397,10 +456,10 @@ class SolveSudoku( object ):
 					repeat = True
 				lpToDo -= 1
 			
-			if (loopMoves == 0) and (not self.board.isSolved()):
-				moves = self.solveSingle5050()
-				self.allMoves.extend(moves)
-				if len(moves) > 0: repeat = True
+			#if (loopMoves == 0) and (not self.board.isSolved()):
+			#	moves = self.solveSingle5050()
+			#	self.allMoves.extend(moves)
+			#	if len(moves) > 0: repeat = True
 			
 			#moves = self.solveForDoubleMissingValues()
 			#if len(moves) > 0: repeat = True

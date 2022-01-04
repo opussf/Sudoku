@@ -17,111 +17,111 @@ class TestSolveSudoku(unittest.TestCase):
 		self.Sudoku = SolveSudoku( board )
 		self.sol = ['1','2','3','4','5','6','7','8','9']
 		self.sqSol = [['1','2','3'],['4','5','6'],['7','8','9']]
-	def test_solveLine_01(self):
+	def notest_solveLine_01(self):
 		""" test solveLine_01 - 2 missing values """
 		self.failIf(self.Sudoku.solveLine([None,'2','3','4',None,'6','7','8','9']), "Solution is indeterminate")
-	def test_solveLine_02(self):
+	def notest_solveLine_02(self):
 		""" test solveLine_02 value 1 missing """
 		s = self.Sudoku.solveLine([None,'2','3','4','5','6','7','8','9'])
 		self.assertEqual(s[0], self.sol, "Should have solved this")
-	def test_solveLine_03(self):
+	def notest_solveLine_03(self):
 		"""solveLine_03 value 5 missing """
 		s = self.Sudoku.solveLine(['1','2','3','4',None,'6','7','8','9'])
 		self.assertEqual(s[0], self.sol, "Should have solved this")
-	def test_solveLine_04(self):
+	def notest_solveLine_04(self):
 		"""0 Solvable rows"""
 		Found = None
 		for r in range(9):
 			Found = Found or self.Sudoku.solveLine(self.Sudoku.board.getRow(r))
 		self.failIf(Found, "No single solvable row should be found")
-	def test_solveLine_05(self):
+	def notest_solveLine_05(self):
 		"""0 Solvable cols"""
 		Found = None
 		for c in range(9):
 			Found = Found or self.Sudoku.solveLine(self.Sudoku.board.getCol(c))
 		self.failIf(Found, "No single solvable col should be found")
-	def test_solveLine_06(self):
+	def notest_solveLine_06(self):
 		"""0 Solvable squares"""
 		Found = None
 		Found = self.Sudoku.solveLine(self.Sudoku.board.getSquare(0,0,3)[1])
 		self.failIf(Found, "This square is not solvable")
-	def test_solveSquare_01( self ):
+	def notest_solveSquare_01( self ):
 		""" solveSquare with 2 empty spots is not solvable """
 		self.failIf(self.Sudoku.solveSquare([[None,'2','3'],['4',None,'6'],['7','8','9']]), "Solution is indeterminate")
-	def test_solveSquare_02( self ):
+	def notest_solveSquare_02( self ):
 		""" solveSquare is not really needed """
 		s = self.Sudoku.solveSquare([[None,'2','3'],['4','5','6'],['7','8','9']])
 		#self.assertEqual(s[0], self.sqSol, "Should have solved this")
-	def test_buildUsed_01( self ):
+	def notest_buildUsed_01( self ):
 		""" test buildUsed returns None list if value is set """
 		self.assertEqual( self.Sudoku.buildUsed( 0, 0 ), [None]*self.Sudoku.board.size )
-	def test_buildUsed_02( self ):
+	def notest_buildUsed_02( self ):
 		""" test buildUsed returns expected values """
 		self.assertEquals( self.Sudoku.buildUsed( 2, 0 ), [None,None,'3','4','5','6','7','8','9'], 
 				"buildUsed should return a list of the values not usable for that box" )
-	def test_buildUsed_03( self ):
+	def notest_buildUsed_03( self ):
 		""" test buildUsed sets the notes on the board correctly """
 		self.Sudoku.buildUsed( 2, 0 )
 		self.assertEquals( self.Sudoku.board.getNotes( 2, 0 ), [None,None,'3','4','5','6','7','8','9'], 
 				"buildUsed should set the list of the values not usable for that box for the board" )
-	def test_buildUsed_04( self ):
+	def notest_buildUsed_04( self ):
 		""" test_buildUsed_04 - single value, the value box """
 		self.Sudoku.board.initBoard( self.singleValuePuzzle )
 		self.assertEqual( self.Sudoku.buildUsed( 5, 0 ), [None]*self.Sudoku.board.size )
 		self.failIf( self.Sudoku.board.getPossible( 5, 0 ) )
-	def test_buildUsed_05( self ):
+	def notest_buildUsed_05( self ):
 		""" test_buildUsed_04 - single value, the value row """
 		self.Sudoku.board.initBoard( self.singleValuePuzzle )
 		self.assertEqual( self.Sudoku.buildUsed( 0, 0 ), [None,'2',None,None,None,None,None,'8',None])
 		poss = self.Sudoku.board.getPossible( 0, 0 )
 		poss.sort()
 		self.assertEqual( poss, ['1','3','4','5','6','7','9'] )
-	def test_buildUsed_06( self ):
+	def notest_buildUsed_06( self ):
 		""" test_buildUsed_04 - single value, the value col """
 		self.Sudoku.board.initBoard( self.singleValuePuzzle )
 		self.assertEqual( self.Sudoku.buildUsed( 5, 8 ), [None,None,None,None,None,None,None,'8',None])
 		poss = self.Sudoku.board.getPossible( 5, 8 )
 		poss.sort()
 		self.assertEqual( poss, ['1','2','3','4','5','6','7','9'] )
-	def test_buildUsed_07( self ):
+	def notest_buildUsed_07( self ):
 		""" test_buildUsed_04 - single value, the value square """
 		self.Sudoku.board.initBoard( self.singleValuePuzzle )
 		self.assertEqual( self.Sudoku.buildUsed( 3, 2 ), [None,'2',None,None,None,None,None,'8',None])
 		poss = self.Sudoku.board.getPossible( 3, 2 )
 		poss.sort()
 		self.assertEqual( poss, ['1','3','4','5','6','7','9'] )
-	def test_buildUsedAll_01( self ):
+	def notest_buildUsedAll_01( self ):
 		""" test that buildUsedAll sets the notes on the board correctly """
 		self.Sudoku.buildUsedAll()
 		self.assertEquals( self.Sudoku.board.getNotes( 6, 6 ), [None,None,'3','4',None,'6',None,None,'9'], 
 				"buildUsedAll should set the list of the values not usable for all the boxes for the board" )
-	def test_solveForSingleValues_01( self ):
+	def notest_solveForSingleValues_01( self ):
 		""" test that solveForSingleValues finds missing values and returns a list of 2 """
 		self.Sudoku.buildUsedAll()
 		moves = self.Sudoku.solveForSingleValues()
 		self.assertEquals( len(moves), 2, "Two moves should have been found" )
-	def test_solveForSingleValues_02( self ):
+	def notest_solveForSingleValues_02( self ):
 		""" test that solveForSingleValues finds missing values and returns a list of tuples or 3 values each """
 		moves = self.Sudoku.solveForSingleValues()
 		self.assertEquals( type( moves ), type( [] ), "moves should be a list" )
 		for m in moves:
 			self.assertEquals( type(m), type( () ), "values should be in a tuple" )
-	def test_solveForSingleMissing_01( self ):
+	def notest_solveForSingleMissing_01( self ):
 		self.Sudoku.buildUsedAll()
 		moves = self.Sudoku.solveForSingleMissing()
 		self.assertEquals( len( moves ), 31 )
 		self.assertEquals( len( moves ), 31, "31 moves should have been found" )
-	def test_solveForSingleMissing_02( self ):
+	def notest_solveForSingleMissing_02( self ):
 		self.Sudoku.buildUsedAll()
 		moves = self.Sudoku.solveForSingleMissing()
 		self.assertEquals( type( moves ), type( [] ) )
 		for m in moves:
 			self.assertEquals( type(m), type( () ) )
-	def test_solveBoard_01( self ):
+	def notest_solveBoard_01( self ):
 		""" tests that solveBoard will solve the simple puzzle """
 		self.Sudoku.solveBoard()
 		self.failUnless( self.Sudoku.board.isSolved() )
-	def test_solveForHiddenSingle_01( self ):
+	def notest_solveForHiddenSingle_01( self ):
 		""" test_solveForHiddenSingle_01 - row 1 should find a hidden 7 at 0,1 """
 		board.initBoard( self.singleHidden )
 		self.Sudoku = SolveSudoku( board )
@@ -133,7 +133,7 @@ class TestSolveSudoku(unittest.TestCase):
 			moves += len(self.Sudoku.solveForSingleMissing())
 		self.assertEquals( self.Sudoku.solveForHiddenSingle(), [(0,1,'7','hs')] )
 ########  Locked Pairs  ##########
-	def test_eliminateLockedPairValues_01( self ):
+	def notest_eliminateLockedPairValues_01( self ):
 		self.Sudoku.buildUsedAll()
 		self.Sudoku.eliminateLockedPairValues(1)
 		self.assertEquals( self.Sudoku.board.getPossible(8,6), ['6'] )
@@ -142,6 +142,12 @@ class TestSolveSudoku(unittest.TestCase):
 #		moves = self.Sudoku.eliminateSinglePairs()
 #	def test_eliminateSinglePairs2( self ):
 #		moves = self.Sudoku.eliminateSinglePairs()
+	def test_DirectInteraction( self ):
+		board.initBoard("")
+		board.loadFromFile("220102Intricate.txt")
+		self.Sudoku = SolveSudoku( board )
+		self.Sudoku.solveBoard()
+		#self.assertEquals( board.getValue( 7, 3 ), 2 )
 		
 
 def suite():
