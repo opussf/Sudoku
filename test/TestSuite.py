@@ -7,7 +7,7 @@ from TestSudokuFiles import *
 from TestMakeRandomSudoku import *
 
 suite = unittest.TestSuite()
-#suite.addTests( unittest.makeSuite( TestSudokuBoard ) )
+suite.addTests( unittest.makeSuite( TestSudokuBoard ) )
 suite.addTests( unittest.makeSuite( TestSolveSudoku ) )
 #suite.addTests( unittest.makeSuite( TestSudokuFiles ) )
 #suite.addTests( unittest.makeSuite( TestMakeRandomSudoku ) )

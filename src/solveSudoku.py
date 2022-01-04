@@ -201,7 +201,7 @@ class SolveSudoku( object ):
 				if len(yVals) == 1:
 					#print "HiddenSingle:",val,"Should go at:",x,yVals[0], "Cols"
 					self.board.setValue( x, yVals[0], val )
-					self.buildUsedAll()
+					#self.buildUsedAll()
 					return [ (x, yVals[0], val, "hs")]
 		for y in range( self.board.size ):
 			missingValsPos = {}    # How many times the missing values are found in this row
@@ -218,7 +218,7 @@ class SolveSudoku( object ):
 				if len(xVals) == 1:
 					#print "HiddenSingle:",val,"Should go at:",xVals[0],y, "Rows"
 					self.board.setValue( xVals[0], y, val )
-					self.buildUsedAll()
+					#self.buildUsedAll()
 					return [(xVals[0], y, val, "hs")]
 			#print "="*42
 		return []
@@ -228,6 +228,7 @@ class SolveSudoku( object ):
 		This is where a value is only possible in a single row or column in a square.
 		That condition removes that value from all other locations in that row or column
 		"""
+
 		moves = []
 		squares = range( 0, self.size, self.squareSize )
 		# loop through the squares
@@ -236,20 +237,30 @@ class SolveSudoku( object ):
 				#print "\tSquare starting at:",sX, sY
 				squareValues = self.board.getSquare( sX, sY, self.squareSize )
 				# find missing values
-				missingIn = {} # v = [[columns], [rows]]
 				for v in self.board.vals:
-					if v not in squareValues[1]:
+					missingIn = [[],[]] # [[columns], [rows]]
+					if v not in squareValues[1]:   # v is missing from this square
 						for y in range( sY, sY+self.squareSize ):
 							for x in range( sX, sX+self.squareSize ):
-								possibleAt = self.board.getPossible( x, y )
+								possibleAt = self.board.getPossible( x, y )  # get the possible value for each coord
 								if possibleAt and v in possibleAt:
-									if v in missingIn.keys():
-										missingIn[v][0].append(x)
-										missingIn[v][1].append(y)
-									else:
-										missingIn[v] = [[x],[y]]
-									#print("%s: %s" % (v,missingIn[v]))
-					print( missingIn.keys() )
+									missingIn[0].append(x)
+									missingIn[1].append(y)
+									#print("%s: %s" % (v,missingIn))
+						# done finding, remove duplicates   [5,5,5] -> [5], [4,5] -> [4,5]
+						missingIn[0] = list(set(missingIn[0]))
+						missingIn[1] = list(set(missingIn[1]))
+						#print( v, missingIn )
+						if len( missingIn[0] ) == 1:
+							singleColumn = missingIn[0][0]
+							print( "\t%s can only be in column %s in Square (%s,%s)." % (v, singleColumn, sX, sY ) )
+							for y in list(set(range(self.size)) - set(range( sY, sY+self.squareSize))):
+								#print(self.board.getPossible( singleColumn, y ) )
+
+								if self.board.setNoteValue( singleColumn, y, v ):
+									print( "SetNoteValue( %s, %s, %s )" % (singleColumn, y, v))
+									moves.append([singleColumn, y, v, "di"])
+		"""
 					if v in missingIn.keys():
 						missingIn[v][0] = list(set(missingIn[v][0]))
 						missingIn[v][1] = list(set(missingIn[v][1]))
@@ -270,7 +281,7 @@ class SolveSudoku( object ):
 							for x in list(set(range(self.size)) - set(range( sX, sX+self.squareSize))):
 								if self.board.clearNoteValue( x, singleRow, v ):
 									moves.append([x, singleRow, v, "di"])
-
+		"""
 
 
 		return moves
@@ -303,7 +314,7 @@ class SolveSudoku( object ):
 	def eliminateLockedPairValues( self, ver ):
 		""" Eliminate Locked Pair Values from Notes 
 		ver should be in [1,2,3] 1 for column testing, 2 for row testing, 3 for square"""
-		self.buildUsedAll()
+		#self.buildUsedAll()
 		valOut = []
 		lpList = []    # list of boxes to mark [x,y,val]
 		# columns
@@ -427,12 +438,6 @@ class SolveSudoku( object ):
 			if len(moves) > 0: repeat,lpUsed = True,3
 			self.allMoves.extend(moves)
 			loopMoves += len(moves)
-
-			if (loopMoves == 0) and not self.board.isSolved():
-				moves = self.solveForDirectInteraction()
-				if len(moves) > 0: repeat,lpUsed = True,3
-				self.allMoves.extend(moves)
-				loopMoves += len(moves)
 			
 			"""
 			if (loopMoves == 0):
@@ -446,6 +451,12 @@ class SolveSudoku( object ):
 				self.allMoves.extend(moves)
 				loopMoves += len(moves)
 				if len(moves) > 0: repeat = True
+
+			if (loopMoves == 0) and not self.board.isSolved():
+				moves = self.solveForDirectInteraction()
+				if len(moves) > 0: repeat = True
+				self.allMoves.extend(moves)
+				loopMoves += len(moves)
 				
 			if (loopMoves == 0) and (not self.board.isSolved()) and (lpToDo):
 				#print "Trying Locked Pair elimination"
@@ -455,6 +466,7 @@ class SolveSudoku( object ):
 				if lpToDo: 
 					repeat = True
 				lpToDo -= 1
+
 			
 			#if (loopMoves == 0) and (not self.board.isSolved()):
 			#	moves = self.solveSingle5050()

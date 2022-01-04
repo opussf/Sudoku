@@ -188,18 +188,6 @@ class TestSudokuBoard(unittest.TestCase):
 		self.myBoard.setNoteValue( 0, 1, 5 )
 		self.assertEqual( self.myBoard.getNotes( 1, 0 ), [None,None,None,None,None,None,None,None,'9'], "Should have one value set" )
 		self.assertEqual( self.myBoard.getNotes( 0, 1 ), [None,None,None,None,'5',None,None,None,None], "Should have one value set" )
-	def test_clearNoteValue_01( self ):
-		self.myBoard.setNoteValue( 8, 7, 1 )
-		self.myBoard.setNoteValue( 8, 7, 2 )
-		self.myBoard.setNoteValue( 8, 7, 3 )
-		self.myBoard.setNoteValue( 8, 7, 4 )
-		self.myBoard.setNoteValue( 8, 7, 5 )
-		self.myBoard.setNoteValue( 8, 7, 6 )
-		self.myBoard.setNoteValue( 8, 7, 7 )
-		self.myBoard.setNoteValue( 8, 7, 8 )
-		self.myBoard.setNoteValue( 8, 7, 9 )
-		self.myBoard.clearNoteValue( 8, 7, 4 )
-		self.assertEqual( self.myBoard.getNotes( 8, 7 ), ['1','2','3',None,'5','6','7','8','9'], "Should not have 4 set")
 	def test_clearNoteAt_01( self ):
 		""" clearNoteAt() should not fail horribly on invalid exception """
 		self.failIf( self.myBoard.clearNoteAt( 9, 9 ), "Should not throw exception" )

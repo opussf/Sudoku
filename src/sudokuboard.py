@@ -112,38 +112,30 @@ class SudokuBoard:
 			return None
 		if (self.baseBoard[y][x] not in [None]):
 			return None
+
 		self.workBoard[y][x] = str(value)
 		self.clearNoteAt( x, y )
+
 		return value
 
 	def clearValue( self, x, y ):
 		self.workBoard[y][x] = None
 	
 	def setNoteValue( self, x, y, value ):
-		""" set the value into the Notes board for x,y.  returns value set """
+		""" set the value into the Notes board for x,y.
+		Notes are values that the coord cannot be.
+
+		returns value set """
 		if (x not in range(self.size)) or (y not in range(self.size)):
 			return None
 		value = int(value)
 		if (value not in range(1,self.size+1)):
 			return None
 		if (self.baseBoard[y][x]) or (self.workBoard[y][x]):
+			print( x, y, "has a value of", self.getValue(x,y))
 			return None
 		self.noteBoard[y][x][value-1] = str(value)
 		return value
-
-	def clearNoteValue( self, x, y, value ):
-		""" clears the value from the Notes board for x,y. """
-		if (x not in range(self.size)) or (y not in range(self.size)):
-			return None
-		value = int(value)
-		if (value not in range(1,self.size+1)):
-			return None
-		if (self.baseBoard[y][x]) or (self.workBoard[y][x]):
-			return None
-		#print( self.noteBoard[y][x] )
-		if self.noteBoard[y][x][value-1]:
-			self.noteBoard[y][x][value-1] = None
-			return value
 		
 	def setOutType( self, typeIn="Full" ):
 		if typeIn not in self.outTypes:

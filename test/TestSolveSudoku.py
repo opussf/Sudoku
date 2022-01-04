@@ -147,6 +147,12 @@ class TestSolveSudoku(unittest.TestCase):
 		board.loadFromFile("220102Intricate.txt")
 		self.Sudoku = SolveSudoku( board )
 		self.Sudoku.solveBoard()
+		#self.assertEquals( board.getPossible( 3, 3 ), ['2', '5', '7'])
+		self.assertEquals( board.getPossible( 5, 3 ), ['7', '6'])
+		self.assertEquals( board.getPossible( 3, 4 ), ['1', '2', '7'])
+		self.assertEquals( board.getPossible( 4, 4 ), ['9', '6'])
+		self.assertEquals( board.getPossible( 5, 4 ), ['9', '7', '6'])
+		self.assertEquals( board.getPossible( 3, 5 ), ['1', '2', '7'])
 		#self.assertEquals( board.getValue( 7, 3 ), 2 )
 		
 
